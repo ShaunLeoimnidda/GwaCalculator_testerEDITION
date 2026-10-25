@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GWA Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+
+    <!-- Website Header -->
+    <header class="site-header">
+        <div class="brand">
+            <div class="cap-icon">🎓</div>
+            <div>
+                <h1>GWA <span>Calculator</span></h1>
+                <p>Compute your General Weighted Average (GWA) easily.</p>
+            </div>
+        </div>
+
+        <div class="header-message">
+            <em>Student Grades,<br>Brighter Future</em>
+            <div class="green-line"></div>
+        </div>
+    </header>
+
+    <!-- Subjects Section -->
+    <section class="card subjects-card">
+        <div class="section-title">
+            <div class="section-icon">▦</div>
+            <h2>Enter Your Subjects</h2>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Subject</th>
+                        <th>Units</th>
+                        <th>Grade</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class="number">1</td>
+                        <td><input type="text" class="subject-name" placeholder="e.g. Mathematics"></td>
+                        <td><input type="number" class="subject-units" placeholder="e.g. 3"></td>
+                        <td>
+                            <select class="subject-grade">
+                                <option value="" selected disabled>Select Grade</option>
+                                <option value="1.00">1.00</option>
+                                <option value="1.25">1.25</option>
+                                <option value="1.50">1.50</option>
+                                <option value="1.75">1.75</option>
+                                <option value="2.00">2.00</option>
+                                <option value="2.25">2.25</option>
+                                <option value="2.50">2.50</option>
+                                <option value="2.75">2.75</option>
+                                <option value="3.00">3.00</option>
+                                <option value="4.00">4.00</option>
+                                <option value="5.00">5.00</option>
+                            </select>
+                        </td>
+                        <td><button class="delete-btn" type="button">♜</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="subject-actions">
+            <button class="add-btn" type="button">＋ Add Subject</button>
+            <button class="compute-btn" type="button">▣ &nbsp; Compute GWA</button>
+        </div>
+    </section>
+
+    <!-- Result Section -->
+    <section class="card result-card">
+        <div class="section-title">
+            <div class="chart-icon">▮▮▮</div>
+            <h2>Result</h2>
+        </div>
+
+        <div class="gwa-box">
+            <p>Your GWA</p>
+            <strong id="gwa-value">0.00</strong>
+        </div>
+      
+        <div class="result-details">
+            <div>
+                <span>Total Subjects</span>
+                <strong id="total-subjects">0</strong>
+            </div>
+            <div>
+                <span>Total Units</span>
+                <strong id="total-units">0</strong>
+            </div>
+            <div>
+                <span>Status</span>
+                <strong id="gwa-status">—</strong>
+            </div>
+            <div>
+                <span>Remarks</span>
+                <strong id="gwa-remarks">—</strong>
+            </div>
+        </div> 
+       
+        <button class="download-btn" type="button">⇩ &nbsp; Download Result</button>
+    </section>
+
+</div>
+
+<script src="{{ url_for('static', filename='gwafunction.js') }}"></script>.
+<script src="{{ url_for('static', filename='login.html') }}"></script>.
+
+</body>
+</html>
